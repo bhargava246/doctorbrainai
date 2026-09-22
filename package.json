@@ -1,0 +1,25 @@
+{
+  "name": "esic-health-bridge",
+  "version": "1.0.0",
+  "description": "ESIC Health Bridge - Healthcare Navigation Platform for Employees",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server . -p 8000 -o",
+    "build": "echo 'Static site - no build required'",
+    "dev": "npx http-server . -p 8000 -c-1"
+  },
+  "keywords": [
+    "ESIC",
+    "healthcare",
+    "employee-benefits",
+    "India",
+    "navigation",
+    "platform"
+  ],
+  "author": "ESIC Health Bridge",
+  "license": "proprietary",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/esic-health-bridge.git"
+  }
+}

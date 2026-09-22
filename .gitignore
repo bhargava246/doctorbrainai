@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build/Output
+dist/
+build/
+*.log
+
+# OS
+Thumbs.db
+.AppleDouble
+.LSOverride
+
+# Testing
+.coverage
+.pytest_cache/
+
+# Temporary files
+*.tmp
+*.temp
+tmp/
+
+# Configuration
+.env.example
+config.local.js
+
+# Production build artifacts
+*.bundle.js
+*.min.js
+*.min.css

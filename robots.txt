@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /.git/
+Disallow: /node_modules/
+
+Sitemap: https://yourdomain.com/sitemap.xml
+
+# Respect crawl delays
+Crawl-delay: 1
+
+# Allow major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: bingbot
+Allow: /

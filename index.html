@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESIC Health Bridge</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-brand">
+      <div class="nav-brand-icon">⚡</div>
+      <span>ESIC Health Bridge</span>
+    </div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#for-employees">For Employees</a>
+      <a href="#partner">Partner</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Navigating ESIC Healthcare Shouldn't Be This Hard</h1>
+      <p class="subtitle">Your employees spend hours searching for the right ESIC facility, department, and information. We connect them directly to the care they need.</p>
+      <div class="hero-cta-group">
+        <button class="btn btn-primary" onclick="scrollToSection('how-it-works')">See How It Works</button>
+        <button class="btn btn-secondary" onclick="openDemo()">Request Demo</button>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="dashboard-preview">
+        <div class="dashboard-header">
+          <div class="dashboard-logo">⚡</div>
+          <div class="dashboard-title">ESIC Platform</div>
+        </div>
+        <div class="dashboard-content">
+          <div class="dashboard-stat">
+            <div class="stat-label">Employees Guided</div>
+            <div class="stat-value">50K+</div>
+          </div>
+          <div class="dashboard-stat">
+            <div class="stat-label">Facilities Connected</div>
+            <div class="stat-value">100+</div>
+          </div>
+          <div class="dashboard-stat">
+            <div class="stat-label">Success Rate</div>
+            <div class="stat-value">98%</div>
+          </div>
+        </div>
+        <div class="dashboard-chart">
+          <div class="chart-bar" style="height: 60%;"></div>
+          <div class="chart-bar" style="height: 75%;"></div>
+          <div class="chart-bar" style="height: 85%;"></div>
+          <div class="chart-bar" style="height: 70%;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem Statement -->
+  <section id="problem">
+    <div class="section-header">
+      <div class="section-eyebrow">The Challenge</div>
+      <h2>What's Stopping Employees from Getting Care?</h2>
+      <p class="section-desc">Your employees are eligible for quality ESIC healthcare, but the path to access is broken.</p>
+    </div>
+
+    <div class="problem-grid">
+      <div class="problem-item">
+        <h3>⏰ Lost Time</h3>
+        <p>Employees waste hours searching for the right facility and department information.</p>
+      </div>
+      <div class="problem-item">
+        <h3>❓ Unclear Process</h3>
+        <p>Complex bureaucracy leaves employees confused about eligibility and required documents.</p>
+      </div>
+      <div class="problem-item">
+        <h3>🏥 Wrong Facility</h3>
+        <p>Without guidance, employees often visit the wrong hospital or department.</p>
+      </div>
+      <div class="problem-item">
+        <h3>📞 Repetitive Support</h3>
+        <p>HR teams spend valuable time answering the same ESIC navigation questions daily.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="section-header">
+      <div class="section-eyebrow">Platform Features</div>
+      <h2>Everything Your Employees Need to Access ESIC Care</h2>
+      <p class="section-desc">One unified platform that solves the entire healthcare navigation journey.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-number">01</div>
+        <h3>ESIC Healthcare Navigation</h3>
+        <p>Intelligent guidance that helps employees identify the appropriate ESIC facility based on their needs.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-number">02</div>
+        <h3>Hospital & Facility Finder</h3>
+        <p>Easy-to-use interface to search relevant ESIC hospitals, dispensaries, and healthcare facilities nearby.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-number">03</div>
+        <h3>Department Guidance</h3>
+        <p>Clear information about hospital departments and which service is relevant for employee needs.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-number">04</div>
+        <h3>Appointment Assistance</h3>
+        <p>Navigate appointment processes and service requests when functionality is officially available.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-number">05</div>
+        <h3>ESIC Scheme Information</h3>
+        <p>Easy-to-understand explanations of ESIC benefits, coverage, and available government schemes.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-number">06</div>
+        <h3>AI Healthcare Assistant</h3>
+        <p>24/7 AI-powered guidance to answer questions and direct employees to official healthcare channels.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section id="how-it-works">
+    <div class="section-header">
+      <div class="section-eyebrow">Implementation</div>
+      <h2>A Simple Six-Step Journey</h2>
+      <p class="section-desc">From onboarding to successful healthcare access.</p>
+    </div>
+
+    <div class="flow-container">
+      <div class="flow-step">
+        <div class="step-number">1</div>
+        <h3>Organisation Onboards</h3>
+        <p>Your company partners with us and provisions employee access.</p>
+      </div>
+      <div class="flow-step">
+        <div class="step-number">2</div>
+        <h3>Employee Registers</h3>
+        <p>Employees securely verify their relevant details on the platform.</p>
+      </div>
+      <div class="flow-step">
+        <div class="step-number">3</div>
+        <h3>Request Assistance</h3>
+        <p>Employee selects the healthcare service or facility they need.</p>
+      </div>
+      <div class="flow-step">
+        <div class="step-number">4</div>
+        <h3>Platform Guides</h3>
+        <p>Intelligent system identifies appropriate facility and service pathway.</p>
+      </div>
+      <div class="flow-step">
+        <div class="step-number">5</div>
+        <h3>Employee Accesses Care</h3>
+        <p>Clear guidance, directions, and next steps provided directly.</p>
+      </div>
+      <div class="flow-step">
+        <div class="step-number">6</div>
+        <h3>Follow-Up & Support</h3>
+        <p>Reminders and tracking for continued healthcare access support.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section id="benefits">
+    <div class="section-header">
+      <div class="section-eyebrow">Why Choose Us</div>
+      <h2>Real Benefits for Your Organisation</h2>
+      <p class="section-desc">Give your employees better healthcare access while reducing HR workload.</p>
+    </div>
+
+    <div class="benefits-list">
+      <div class="benefit-item">
+        <div class="benefit-icon">😊</div>
+        <div class="benefit-content">
+          <h3>Better Employee Experience</h3>
+          <p>Simpler navigation leads to faster access to the ESIC care they're entitled to.</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">🧠</div>
+        <div class="benefit-content">
+          <h3>Reduced Confusion</h3>
+          <p>Clear guidance eliminates the guesswork about facilities and departments.</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">♿</div>
+        <div class="benefit-content">
+          <h3>Improved Accessibility</h3>
+          <p>Multilingual support and simple design serve employees at all literacy levels.</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">⚡</div>
+        <div class="benefit-content">
+          <h3>HR Efficiency</h3>
+          <p>Reduce repetitive ESIC questions, freeing HR to focus on people and culture.</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">💼</div>
+        <div class="benefit-content">
+          <h3>Modern Digital Support</h3>
+          <p>A 21st-century platform for healthcare navigation in your organisation.</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">💪</div>
+        <div class="benefit-content">
+          <h3>Workforce Wellbeing</h3>
+          <p>Help employees make better use of healthcare benefits available to them.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- For Employees -->
+  <section id="for-employees">
+    <div class="employees-grid">
+      <div class="employee-content">
+        <h3>Designed for Your Employees</h3>
+        <p>Every employee—from factory floor to office—gets simple access to the information they need to navigate ESIC healthcare.</p>
+
+        <div class="employee-features">
+          <div class="feature-item">
+            <div class="feature-check">✓</div>
+            <span>Find nearby ESIC facilities instantly</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-check">✓</div>
+            <span>Understand what documents to bring</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-check">✓</div>
+            <span>Get guidance in your preferred language</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-check">✓</div>
+            <span>Access 24/7 AI healthcare assistant</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-check">✓</div>
+            <span>Track appointments and follow-ups</span>
+          </div>
+        </div>
+      </div>
+      <div class="employee-visual">
+        <div class="employee-mockup">
+          <div class="phone-frame">
+            <div class="phone-screen">
+              <div class="phone-notch"></div>
+              <div class="phone-content">
+                <div class="phone-header"></div>
+                <div class="phone-item full"></div>
+                <div class="phone-item partial"></div>
+                <div class="phone-item full"></div>
+                <div class="phone-item partial"></div>
+              </div>
+            </div>
+          </div>
+          <div class="app-label">Mobile App Experience</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section id="stats">
+    <div class="section-header">
+      <div class="section-eyebrow">Growing Impact</div>
+      <h2>Trusted by Leading Organisations</h2>
+    </div>
+
+    <div class="stats-container">
+      <div class="stat-item">
+        <div class="stat-number">50K+</div>
+        <div class="stat-label">Employees Served</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">100+</div>
+        <div class="stat-label">ESIC Facilities Connected</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">2</div>
+        <div class="stat-label">Languages Supported</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">24/7</div>
+        <div class="stat-label">AI Support Available</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="partner">
+    <div class="cta-section">
+      <h2>Ready to Transform Employee Healthcare Access?</h2>
+      <p>Give your workforce the ESIC healthcare navigation tools they deserve. Let's talk about how ESIC Health Bridge can reduce HR burden while improving employee wellbeing.</p>
+      <div class="cta-buttons">
+        <button class="btn btn-cta-primary" onclick="openDemo()">Request a Demo</button>
+        <button class="btn btn-cta-secondary" onclick="contactTeam()">Talk to Our Team</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>For Organisations</h4>
+        <a href="#services">Dashboard</a>
+        <a href="#how-it-works">Employee Onboarding</a>
+        <a href="#benefits">Analytics</a>
+        <a href="#partner">Support</a>
+      </div>
+      <div class="footer-section">
+        <h4>For Employees</h4>
+        <a href="#for-employees">Healthcare Navigation</a>
+        <a href="#services">Facility Finder</a>
+        <a href="#services">Scheme Information</a>
+        <a href="#services">AI Assistant</a>
+      </div>
+      <div class="footer-section">
+        <h4>Company</h4>
+        <a href="mailto:hello@esichealthbridge.com">Contact Us</a>
+        <a href="#about">About Us</a>
+        <a href="#careers">Careers</a>
+        <a href="#blog">Blog</a>
+      </div>
+      <div class="footer-section">
+        <h4>Legal</h4>
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#terms">Terms of Service</a>
+        <a href="#security">Security</a>
+        <a href="#compliance">Compliance</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2024 ESIC Health Bridge. All rights reserved.</div>
+      <div class="footer-disclaimer">We are a technology and healthcare-navigation service provider. We do not replace ESIC, ESIC hospitals, doctors, or authorised healthcare providers.</div>
+    </div>
+  </footer>
+
+  <!-- Modal for Demo -->
+  <div id="demoModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeDemo()">&times;</span>
+      <h2>Request a Demo</h2>
+      <form onsubmit="handleSubmit(event)">
+        <div class="form-group">
+          <label for="name">Company Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+          <label for="employees">Number of Employees</label>
+          <input type="text" id="employees" name="employees" placeholder="e.g., 500-1000">
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Demo Request</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
