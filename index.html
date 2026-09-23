@@ -4,59 +4,88 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ESIC Health Bridge</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <!-- Navigation -->
   <nav>
     <div class="nav-brand">
-      <div class="nav-brand-icon">⚡</div>
+      <div class="nav-brand-icon">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 17 L3 10 Q3 7 6 7 L18 7 Q21 7 21 10 L21 17" />
+          <line x1="3" y1="20" x2="3" y2="17"/>
+          <line x1="21" y1="20" x2="21" y2="17"/>
+          <line x1="7" y1="14" x2="7" y2="17"/>
+          <line x1="12" y1="12" x2="12" y2="17"/>
+          <line x1="17" y1="14" x2="17" y2="17"/>
+        </svg>
+      </div>
       <span>ESIC Health Bridge</span>
     </div>
-    <div class="nav-links">
-      <a href="#services">Services</a>
-      <a href="#how-it-works">How It Works</a>
-      <a href="#for-employees">For Employees</a>
-      <a href="#partner">Partner</a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#services" data-nav-link>Services</a>
+      <a href="#how-it-works" data-nav-link>How It Works</a>
+      <a href="#for-employees" data-nav-link>For Employees</a>
+      <a href="#trust" data-nav-link>Trust</a>
+      <a href="#partner" data-nav-link>Partner</a>
+      <button class="btn btn-primary nav-cta" onclick="openDemo()">Request Demo</button>
     </div>
   </nav>
 
+  <main id="main">
   <!-- Hero -->
   <section class="hero">
     <div class="hero-content">
+      <div class="section-eyebrow">For HR &amp; Compliance Teams</div>
       <h1>Navigating ESIC Healthcare Shouldn't Be This Hard</h1>
       <p class="subtitle">Your employees spend hours searching for the right ESIC facility, department, and information. We connect them directly to the care they need.</p>
       <div class="hero-cta-group">
         <button class="btn btn-primary" onclick="scrollToSection('how-it-works')">See How It Works</button>
         <button class="btn btn-secondary" onclick="openDemo()">Request Demo</button>
       </div>
+      <div class="trust-strip" aria-label="Trust and compliance summary">
+        <span class="trust-chip">Independent navigation layer</span>
+        <span class="trust-chip">Your data stays private</span>
+        <span class="trust-chip">Not affiliated with ESIC</span>
+      </div>
     </div>
     <div class="hero-visual">
-      <div class="dashboard-preview">
-        <div class="dashboard-header">
-          <div class="dashboard-logo">⚡</div>
-          <div class="dashboard-title">ESIC Platform</div>
+      <div class="product-preview" role="img" aria-label="Preview of the employee facility finder screen">
+        <div class="pp-topbar">
+          <span class="pp-brand">
+            <span class="pp-brand-icon">
+              <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 17 L3 10 Q3 7 6 7 L18 7 Q21 7 21 10 L21 17" />
+              </svg>
+            </span>
+            Health Bridge
+          </span>
+          <span class="pp-lang-chip">EN / हिं</span>
         </div>
-        <div class="dashboard-content">
-          <div class="dashboard-stat">
-            <div class="stat-label">Employees Guided</div>
-            <div class="stat-value">50K+</div>
+        <div class="pp-search">Where do you need to go?</div>
+        <div class="pp-list">
+          <div class="pp-card">
+            <div class="pp-card-main">
+              <div class="pp-card-title">ESIC Dispensary, Sector 12</div>
+              <div class="pp-card-meta">1.2 km &middot; <span class="pp-badge">&check; Recognised</span></div>
+            </div>
+            <button class="pp-card-action" type="button" tabindex="-1">Directions</button>
           </div>
-          <div class="dashboard-stat">
-            <div class="stat-label">Facilities Connected</div>
-            <div class="stat-value">100+</div>
+          <div class="pp-card">
+            <div class="pp-card-main">
+              <div class="pp-card-title">ESIC Model Hospital, Okhla</div>
+              <div class="pp-card-meta">3.6 km &middot; <span class="pp-badge">&check; Recognised</span></div>
+            </div>
+            <button class="pp-card-action" type="button" tabindex="-1">Directions</button>
           </div>
-          <div class="dashboard-stat">
-            <div class="stat-label">Success Rate</div>
-            <div class="stat-value">98%</div>
-          </div>
-        </div>
-        <div class="dashboard-chart">
-          <div class="chart-bar" style="height: 60%;"></div>
-          <div class="chart-bar" style="height: 75%;"></div>
-          <div class="chart-bar" style="height: 85%;"></div>
-          <div class="chart-bar" style="height: 70%;"></div>
         </div>
       </div>
     </div>
@@ -72,19 +101,23 @@
 
     <div class="problem-grid">
       <div class="problem-item">
-        <h3>⏰ Lost Time</h3>
+        <div class="problem-icon" aria-hidden="true">⏰</div>
+        <h3>Lost Time</h3>
         <p>Employees waste hours searching for the right facility and department information.</p>
       </div>
       <div class="problem-item">
-        <h3>❓ Unclear Process</h3>
+        <div class="problem-icon" aria-hidden="true">❓</div>
+        <h3>Unclear Process</h3>
         <p>Complex bureaucracy leaves employees confused about eligibility and required documents.</p>
       </div>
       <div class="problem-item">
-        <h3>🏥 Wrong Facility</h3>
+        <div class="problem-icon" aria-hidden="true">🏥</div>
+        <h3>Wrong Facility</h3>
         <p>Without guidance, employees often visit the wrong hospital or department.</p>
       </div>
       <div class="problem-item">
-        <h3>📞 Repetitive Support</h3>
+        <div class="problem-icon" aria-hidden="true">📞</div>
+        <h3>Repetitive Support</h3>
         <p>HR teams spend valuable time answering the same ESIC navigation questions daily.</p>
       </div>
     </div>
@@ -106,7 +139,7 @@
       </div>
       <div class="service-card">
         <div class="service-number">02</div>
-        <h3>Hospital & Facility Finder</h3>
+        <h3>Hospital &amp; Facility Finder</h3>
         <p>Easy-to-use interface to search relevant ESIC hospitals, dispensaries, and healthcare facilities nearby.</p>
       </div>
       <div class="service-card">
@@ -132,45 +165,70 @@
     </div>
   </section>
 
+  <!-- Positioning -->
+  <section id="positioning" class="positioning-section">
+    <div class="positioning-inner">
+      <div class="section-eyebrow section-eyebrow--inverse">Why We're Different</div>
+      <h2 class="positioning-headline">Built for the workforce insurtech ignores.</h2>
+      <p class="positioning-desc">Most corporate health-benefits platforms are designed for urban, English-first, white-collar teams. That leaves out most of India's ESIC-eligible workforce.</p>
+      <div class="positioning-stats">
+        <div class="positioning-stat">
+          <div class="positioning-stat-value" data-count="20" data-suffix="%">20%</div>
+          <div class="positioning-stat-label">of the workforce &mdash; above the ESIC wage threshold &mdash; is who typical insurtech platforms serve.</div>
+        </div>
+        <div class="positioning-stat positioning-stat--accent">
+          <div class="positioning-stat-value" data-count="180" data-suffix="M+">180M+</div>
+          <div class="positioning-stat-label">ESIC-eligible employees is who ESIC Health Bridge is built to serve instead.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- How It Works -->
   <section id="how-it-works">
     <div class="section-header">
       <div class="section-eyebrow">Implementation</div>
       <h2>A Simple Six-Step Journey</h2>
-      <p class="section-desc">From onboarding to successful healthcare access.</p>
+      <p class="section-desc">From onboarding to successful healthcare access. Select a step to see what happens.</p>
     </div>
 
     <div class="flow-container">
-      <div class="flow-step">
+      <button class="flow-step" type="button" data-step="1">
         <div class="step-number">1</div>
         <h3>Organisation Onboards</h3>
         <p>Your company partners with us and provisions employee access.</p>
-      </div>
-      <div class="flow-step">
+        <p class="step-detail" hidden>HR shares no personal health data &mdash; only who's eligible for access.</p>
+      </button>
+      <button class="flow-step" type="button" data-step="2">
         <div class="step-number">2</div>
         <h3>Employee Registers</h3>
         <p>Employees securely verify their relevant details on the platform.</p>
-      </div>
-      <div class="flow-step">
+        <p class="step-detail" hidden>Registration takes under two minutes, in the employee's own language.</p>
+      </button>
+      <button class="flow-step" type="button" data-step="3">
         <div class="step-number">3</div>
         <h3>Request Assistance</h3>
         <p>Employee selects the healthcare service or facility they need.</p>
-      </div>
-      <div class="flow-step">
+        <p class="step-detail" hidden>One tap from the home screen &mdash; no forms, no jargon.</p>
+      </button>
+      <button class="flow-step" type="button" data-step="4">
         <div class="step-number">4</div>
         <h3>Platform Guides</h3>
         <p>Intelligent system identifies appropriate facility and service pathway.</p>
-      </div>
-      <div class="flow-step">
+        <p class="step-detail" hidden>Every recommendation shows a plain-language reason it was chosen.</p>
+      </button>
+      <button class="flow-step" type="button" data-step="5">
         <div class="step-number">5</div>
         <h3>Employee Accesses Care</h3>
         <p>Clear guidance, directions, and next steps provided directly.</p>
-      </div>
-      <div class="flow-step">
+        <p class="step-detail" hidden>Works offline &mdash; directions and documents stay cached on-device.</p>
+      </button>
+      <button class="flow-step" type="button" data-step="6">
         <div class="step-number">6</div>
-        <h3>Follow-Up & Support</h3>
+        <h3>Follow-Up &amp; Support</h3>
         <p>Reminders and tracking for continued healthcare access support.</p>
-      </div>
+        <p class="step-detail" hidden>HR sees aggregate outcomes &mdash; never an individual's medical details.</p>
+      </button>
     </div>
   </section>
 
@@ -233,7 +291,7 @@
     <div class="employees-grid">
       <div class="employee-content">
         <h3>Designed for Your Employees</h3>
-        <p>Every employee—from factory floor to office—gets simple access to the information they need to navigate ESIC healthcare.</p>
+        <p>Every employee&mdash;from factory floor to office&mdash;gets simple access to the information they need to navigate ESIC healthcare.</p>
 
         <div class="employee-features">
           <div class="feature-item">
@@ -261,21 +319,51 @@
       <div class="employee-visual">
         <div class="employee-mockup">
           <div class="phone-frame">
-            <div class="phone-screen">
+            <div class="phone-screen entitlement-screen">
               <div class="phone-notch"></div>
-              <div class="phone-content">
-                <div class="phone-header"></div>
-                <div class="phone-item full"></div>
-                <div class="phone-item partial"></div>
-                <div class="phone-item full"></div>
-                <div class="phone-item partial"></div>
+              <div class="entitlement-card">
+                <div class="entitlement-header">My ESIC Coverage</div>
+                <div class="entitlement-row"><span>✓</span> OPD consultations</div>
+                <div class="entitlement-row"><span>✓</span> Inpatient care</div>
+                <div class="entitlement-row"><span>✓</span> Dependents covered</div>
+                <div class="entitlement-qr" aria-hidden="true"></div>
+                <div class="entitlement-qr-label">Show at reception</div>
               </div>
             </div>
           </div>
-          <div class="app-label">Mobile App Experience</div>
+          <div class="app-label">My Entitlement Card</div>
         </div>
       </div>
     </div>
+  </section>
+
+  <!-- Trust & Compliance -->
+  <section id="trust" class="trust-section">
+    <div class="section-header">
+      <div class="section-eyebrow">Trust &amp; Compliance</div>
+      <h2>Clear About What We Are &mdash; and What We're Not</h2>
+      <p class="section-desc">Healthcare and government bureaucracy are both anxiety-inducing. We keep this plain.</p>
+    </div>
+
+    <div class="trust-grid">
+      <div class="trust-card">
+        <div class="trust-card-icon" aria-hidden="true">🔗</div>
+        <h3>Independent navigation layer</h3>
+        <p>We guide employees through the ESIC system &mdash; we don't replace it, and we're not officially affiliated with it.</p>
+      </div>
+      <div class="trust-card">
+        <div class="trust-card-icon" aria-hidden="true">🔒</div>
+        <h3>Your data stays yours</h3>
+        <p>Employee health information is never sold, and HR only ever sees aggregate, anonymised usage &mdash; never individual case detail.</p>
+      </div>
+      <div class="trust-card">
+        <div class="trust-card-icon" aria-hidden="true">📋</div>
+        <h3>Government scheme, private-sector clarity</h3>
+        <p>Entitlements and processes are explained in plain language, cross-checked against official ESIC rules.</p>
+      </div>
+    </div>
+
+    <p class="trust-disclaimer">We are a technology and healthcare-navigation service provider. We do not replace ESIC, ESIC hospitals, doctors, or authorised healthcare providers.</p>
   </section>
 
   <!-- Stats -->
@@ -287,15 +375,15 @@
 
     <div class="stats-container">
       <div class="stat-item">
-        <div class="stat-number">50K+</div>
+        <div class="stat-number" data-count="50" data-suffix="K+">50K+</div>
         <div class="stat-label">Employees Served</div>
       </div>
       <div class="stat-item">
-        <div class="stat-number">100+</div>
+        <div class="stat-number" data-count="100" data-suffix="+">100+</div>
         <div class="stat-label">ESIC Facilities Connected</div>
       </div>
       <div class="stat-item">
-        <div class="stat-number">2</div>
+        <div class="stat-number" data-count="2" data-suffix="">2</div>
         <div class="stat-label">Languages Supported</div>
       </div>
       <div class="stat-item">
@@ -303,6 +391,7 @@
         <div class="stat-label">AI Support Available</div>
       </div>
     </div>
+    <p class="stats-caption">Figures from active pilot programs with partner organisations.</p>
   </section>
 
   <!-- CTA -->
@@ -316,6 +405,7 @@
       </div>
     </div>
   </section>
+  </main>
 
   <!-- Footer -->
   <footer>
@@ -336,7 +426,8 @@
       </div>
       <div class="footer-section">
         <h4>Company</h4>
-        <a href="mailto:hello@esichealthbridge.com">Contact Us</a>
+        <a href="mailto:chetan@doctorbrainai.com">Contact Us</a>
+        <a href="tel:+918112231341">+91 81122 31341</a>
         <a href="#about">About Us</a>
         <a href="#careers">Careers</a>
         <a href="#blog">Blog</a>
@@ -350,7 +441,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div>© 2024 ESIC Health Bridge. All rights reserved.</div>
+      <div>© 2024 ESIC Health Bridge. All rights reserved. A DoctorBrainAI.com company, Jaipur, Rajasthan, India.</div>
       <div class="footer-disclaimer">We are a technology and healthcare-navigation service provider. We do not replace ESIC, ESIC hospitals, doctors, or authorised healthcare providers.</div>
     </div>
   </footer>
@@ -360,7 +451,8 @@
     <div class="modal-content">
       <span class="close" onclick="closeDemo()">&times;</span>
       <h2>Request a Demo</h2>
-      <form onsubmit="handleSubmit(event)">
+
+      <form id="demoForm" onsubmit="handleSubmit(event)">
         <div class="form-group">
           <label for="name">Company Name</label>
           <input type="text" id="name" name="name" required>
@@ -371,14 +463,27 @@
         </div>
         <div class="form-group">
           <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone" required>
+          <input type="tel" id="phone" name="phone" required inputmode="numeric" placeholder="10-digit mobile number">
+          <div class="field-error" id="phoneError" aria-live="polite"></div>
         </div>
         <div class="form-group">
           <label for="employees">Number of Employees</label>
           <input type="text" id="employees" name="employees" placeholder="e.g., 500-1000">
         </div>
-        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Demo Request</button>
+        <div class="form-error" id="formError" aria-live="polite" hidden></div>
+        <button type="submit" class="btn btn-primary" id="demoSubmitBtn" style="width: 100%;">Send Demo Request</button>
       </form>
+
+      <div class="demo-success" id="demoSuccess" hidden aria-live="polite">
+        <div class="demo-success-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path class="demo-success-check" d="M4 12.5 L9.5 18 L20 5.5" />
+          </svg>
+        </div>
+        <h3>Request received</h3>
+        <p>An ESIC Health Bridge specialist will call within 1 business day.</p>
+        <button type="button" class="btn btn-secondary" onclick="closeDemo()">Close</button>
+      </div>
     </div>
   </div>
 

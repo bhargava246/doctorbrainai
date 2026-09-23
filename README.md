@@ -229,7 +229,7 @@ The site includes:
 ## Support & Feedback
 
 For issues, questions, or feedback:
-- Email: hello@esichealthbridge.com
+- Email: chetan@doctorbrainai.com
 - GitHub Issues: [Create an issue](https://github.com/yourusername/esic-health-bridge/issues)
 
 ## License
